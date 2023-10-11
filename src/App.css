@@ -27,6 +27,7 @@
   width: 90%;
   min-height: 100vh;
   max-height: fit-content;
+  margin-top: 2rem !important;
 }
 
 .navWrapper {
@@ -34,8 +35,14 @@
   height: fit-content !important;
 }
 
-.bookIcon {
+.iconContainer {
   width: 40% !important;
+  height: fit-content !important;
+}
+
+.bookIcon {
+  width: 2rem !important;
+  height: 2.28rem !important;
 }
 
 .rightNav {
@@ -58,6 +65,10 @@
   border-radius: 1rem !important;
   width: 46rem !important;
   height: 4rem !important;
+}
+
+.formInput {
+  background-color: var(--off-white) !important;
 }
 
 @media (min-width: 768px) {
