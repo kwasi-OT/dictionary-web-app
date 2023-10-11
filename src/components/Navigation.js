@@ -6,17 +6,17 @@ import {IoIosArrowDown} from 'react-icons/io';
 
 const Navigation = () => {
     return (
-        <div className='d-flex'>
+        <div className='navWrapper d-flex justify-content-between align-items-center'>
             <div>
                 <RiBook2Line/>
             </div>
-            <div>
-                <div>
+            <div className='rightNav d-flex justify-content-between align-items-center'>
+                <div className='fontSelect d-flex justify-content-between'>
                     <p>Serif</p>
                     <IoIosArrowDown/>
                 </div>
                 <div>
-                    <span>
+                    <span className='toggleButton'>
                         <LiaCircle/>
                     </span>
                     <HiOutlineMoon/>

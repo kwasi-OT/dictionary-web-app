@@ -5,7 +5,7 @@ import SearchForm from './components/SearchForm';
 
 function App() {
   return (
-    <div className="App">
+    <div className='appWrapper d-flex flex-column'>
       <Navigation/>
       <SearchForm/>
       <Display/>
