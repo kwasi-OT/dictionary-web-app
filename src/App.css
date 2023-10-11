@@ -6,3 +6,14 @@
   box-sizing: border-box;
   font-family:  sans-serif, serif;
 }
+
+:root {
+  --purple: #A445ED;
+  --red: #FF5252;
+  --grey: #757575;
+  --light-grey: #E9E9E9;
+  --white:#ffffff;
+  --off-white: #F4F4F4;
+  --dm-body-bg: #050505;
+  --dm-form-bg: #1F1F1F;
+}
