@@ -53,6 +53,13 @@
   height: fit-content !important;
 }
 
+.formWrapper {
+  background-color: var(--off-white);
+  border-radius: 1rem !important;
+  width: 46rem !important;
+  height: 4rem !important;
+}
+
 @media (min-width: 768px) {
   .appWrapper {
     width: 50%;
