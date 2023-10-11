@@ -17,3 +17,46 @@
   --dm-body-bg: #050505;
   --dm-form-bg: #1F1F1F;
 }
+
+.appContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.appWrapper {
+  width: 90%;
+  min-height: 100vh;
+  max-height: fit-content;
+}
+
+.navWrapper {
+  width: 100% !important;
+  height: fit-content !important;
+}
+
+.bookIcon {
+  width: 40% !important;
+}
+
+.rightNav {
+  width: 30% !important;
+  height: fit-content !important;
+}
+
+.fontSelect {
+  width: 40% !important;
+  height: fit-content !important;
+}
+
+.toggleContainer {
+  width: 40% !important;
+  height: fit-content !important;
+}
+
+@media (min-width: 768px) {
+  .appWrapper {
+    width: 50%;
+    min-height: 100vh;
+    max-height: fit-content;
+  }
+}

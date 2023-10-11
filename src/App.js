@@ -5,10 +5,12 @@ import SearchForm from './components/SearchForm';
 
 function App() {
   return (
-    <div className='appWrapper d-flex flex-column'>
-      <Navigation/>
-      <SearchForm/>
-      <Display/>
+    <div className='appContainer d-flex flex-column justify-content-center align-items-center'>
+      <div className='appWrapper d-flex flex-column'>
+        <Navigation/>
+        <SearchForm/>
+        <Display/>
+      </div>
     </div>
   );
 }
