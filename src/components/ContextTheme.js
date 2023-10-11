@@ -6,7 +6,7 @@ export const ThemeContext = createContext()
 
 export const ContextTheme = ({children}) => {
     // set state with darkTheme being false
-    const[darkTheme, setDarkTheme] = useState(false);
+    const[darkTheme, setDarkTheme] = useState(true);
 
     // declare function to handle state change
     const handleStateChange = () => {

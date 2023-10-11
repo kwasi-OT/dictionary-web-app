@@ -23,6 +23,10 @@
   height: 100%;
 }
 
+.appContainer.dark {
+  background-color: var(--dm-body-bg) !important;
+}
+
 .appWrapper {
   width: 90%;
   min-height: 100vh;
@@ -67,8 +71,21 @@
   height: 4rem !important;
 }
 
+.formWrapper.dark {
+  background-color: var(--dm-form-bg) !important;
+}
+
 .formInput {
   background-color: var(--off-white) !important;
+}
+
+.formInput.dark {
+  background-color: var(--dm-form-bg) !important;
+  color: var(--white) !important;
+}
+
+.formInput.dark::placeholder {
+  color: var(--white) !important;
 }
 
 @media (min-width: 768px) {
