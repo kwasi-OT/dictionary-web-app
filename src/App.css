@@ -31,7 +31,7 @@
   width: 90%;
   min-height: 100vh;
   max-height: fit-content;
-  margin-top: 2rem !important;
+  margin-top: 2rem;
 }
 
 .navWrapper {
@@ -40,8 +40,9 @@
 }
 
 .iconContainer {
-  width: 40% !important;
+  width: 50% !important;
   height: fit-content !important;
+  /* border: 1px solid #000; */
 }
 
 .bookIcon {
@@ -52,22 +53,25 @@
 .rightNav {
   width: 30% !important;
   height: fit-content !important;
+  /* border: 1px solid #000; */
 }
 
 .fontSelect {
-  width: 40% !important;
+  width: 70% !important;
   height: fit-content !important;
+  /* border: 1px solid #000; */
 }
 
 .toggleContainer {
-  width: 40% !important;
+  width: 30% !important;
   height: fit-content !important;
+  /* border: 1px solid #000; */
 }
 
 .formWrapper {
   background-color: var(--off-white);
   border-radius: 1rem !important;
-  width: 46rem !important;
+  width: 100% !important;
   height: 4rem !important;
 }
 
@@ -93,5 +97,10 @@
     width: 50%;
     min-height: 100vh;
     max-height: fit-content;
+  }
+
+  .navWrapper {
+    width: 100% !important;
+    height: fit-content !important;
   }
 }

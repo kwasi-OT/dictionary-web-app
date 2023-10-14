@@ -10,7 +10,7 @@ const Navigation = () => {
             <div className='iconContainer'>
                 <RiBook2Line color='#757575' className='bookIcon'/>
             </div>
-            <div className='rightNav d-flex justify-content-end align-items-center'>
+            <div className='rightNav d-flex'>
                 <div className='fontSelect'>
                     <select className='border border-0'>
                         <option>Sans Serif</option>
@@ -18,11 +18,14 @@ const Navigation = () => {
                         <option>Mono</option>
                     </select>
                 </div>
-                <div className='toggleContainer d-flex justify-content-center align-items-center'>
-                    <span className='toggleButton w-10 h-3'>
+                <span className='vr '></span>
+                <div className='toggleContainer d-flex justify-content-end align-items-center'>
+                    <span className='toggleButton'>
                         <LiaCircle/>
                     </span>
-                    <HiOutlineMoon/>
+                    <div>
+                        <HiOutlineMoon/>
+                    </div>
                 </div>
             </div>
         </div>
