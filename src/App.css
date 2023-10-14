@@ -65,9 +65,19 @@
   font-weight: 700 !important;
 }
 
+.select.dark {
+  background-color: var(--dm-body-bg) !important;
+  color: var(--white) !important;
+}
+
 .vLine {
   margin-right: 0.625rem !important;
   margin-left: 0.5rem !important;
+  width: 0.0625rem !important;
+}
+
+.vLine.dark {
+  color: var(--light-grey) !important;
 }
 
 .toggleContainer {
@@ -80,6 +90,15 @@
   height: 1rem !important;
   background-color: var(--grey) !important;
   border-radius: 0.5rem !important;
+}
+
+.toggleButton.dark {
+  background-color: var(--purple) !important;
+  padding-left: 1.1rem !important;
+}
+
+.moon.dark {
+  color: var(--purple) !important;
 }
 
 .formWrapper {
