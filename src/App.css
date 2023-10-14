@@ -51,26 +51,28 @@
 }
 
 .rightNav {
-  width: 49% !important;
+  width: fit-content !important;
   height: fit-content !important;
-  /* border: 1px solid #000; */
 }
 
 .fontSelect {
   width: 56% !important;
   height: fit-content !important;
-  /* border: 1px solid #000; */
+  font-family: Inter;
+  font-size: 1.125rem !important;
+  color: #2d2d2d !important;
+  line-height: 1.5rem !important;
+  font-weight: 700 !important;
 }
 
 .vLine {
-  margin-right: 10px !important;
-  margin-left: 4px !important;
+  margin-right: 0.625rem !important;
+  margin-left: 0.5rem !important;
 }
 
 .toggleContainer {
   width: 35% !important;
   height: fit-content !important;
-  /* border: 1px solid #000; */
 }
 
 .toggleButton {
