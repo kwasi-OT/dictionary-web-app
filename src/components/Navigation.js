@@ -1,8 +1,8 @@
 import React from 'react';
 import {RiBook2Line} from 'react-icons/ri';
 import {HiOutlineMoon} from 'react-icons/hi2';
-import {LiaCircle} from 'react-icons/lia';
-// import {IoIosArrowDown} from 'react-icons/io';
+import {MdCircle} from 'react-icons/md';
+
 
 const Navigation = () => {
     return (
@@ -18,13 +18,13 @@ const Navigation = () => {
                         <option>Mono</option>
                     </select>
                 </div>
-                <span className='vr '></span>
-                <div className='toggleContainer d-flex justify-content-end align-items-center'>
-                    <span className='toggleButton'>
-                        <LiaCircle/>
+                <span className='vLine vr'></span>
+                <div className='toggleContainer d-flex gap-2 justify-content-end align-items-center'>
+                    <span className='toggleButton d-flex align-items-center'>
+                        <MdCircle size='0.88rem' color='#ffffff'/>
                     </span>
                     <div>
-                        <HiOutlineMoon/>
+                        <HiOutlineMoon size='18' className='mb-1'/>
                     </div>
                 </div>
             </div>

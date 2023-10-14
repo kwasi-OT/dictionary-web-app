@@ -51,21 +51,33 @@
 }
 
 .rightNav {
-  width: 30% !important;
+  width: 49% !important;
   height: fit-content !important;
   /* border: 1px solid #000; */
 }
 
 .fontSelect {
-  width: 70% !important;
+  width: 56% !important;
   height: fit-content !important;
   /* border: 1px solid #000; */
 }
 
+.vLine {
+  margin-right: 10px !important;
+  margin-left: 4px !important;
+}
+
 .toggleContainer {
-  width: 30% !important;
+  width: 35% !important;
   height: fit-content !important;
   /* border: 1px solid #000; */
+}
+
+.toggleButton {
+  width: 2.2rem !important;
+  height: 1rem !important;
+  background-color: var(--grey) !important;
+  border-radius: 0.5rem !important;
 }
 
 .formWrapper {
