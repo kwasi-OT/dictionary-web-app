@@ -83,6 +83,7 @@
 .toggleContainer {
   width: 35% !important;
   height: fit-content !important;
+  cursor: pointer;
 }
 
 .toggleButton {
