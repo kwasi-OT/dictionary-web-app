@@ -94,7 +94,7 @@
 
 .toggleButton.dark {
   background-color: var(--purple) !important;
-  padding-left: 1.1rem !important;
+  padding-left: 1.2rem !important;
 }
 
 .moon.dark {
@@ -123,6 +123,25 @@
 
 .formInput.dark::placeholder {
   color: var(--white) !important;
+}
+
+.source {
+  font-family: Inter !important;
+  font-size: 0.88rem !important;
+}
+
+.source.dark {
+  color: var(--grey) !important;
+}
+
+.bottomLink {
+  font-family: Inter !important;
+  font-size: 0.88rem !important;
+  text-decoration: underline;
+}
+
+.bottomLink.dark {
+  color: var(--white);
 }
 
 @media (min-width: 768px) {

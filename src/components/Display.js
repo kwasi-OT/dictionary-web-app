@@ -53,10 +53,12 @@ const Display = () => {
                     <p>“Keyboarding is the part of this job I hate the most.”</p>
                 </div>
             </div>
-            <div className={`d-flex`}>
+            <div className={`source d-flex gap-4 align-items-center ${darkTheme ? 'dark' : ''}`}>
                 <p>Source</p>
-                <p>https://en.wiktionary.org/wiki/keyboard</p>
-                <FaArrowUpRightFromSquare/>
+                <div className={`bottomLink d-flex gap-2 align-items-center ${darkTheme ? 'dark' : ''}`}>
+                    <p>https://en.wiktionary.org/wiki/keyboard</p>
+                    <FaArrowUpRightFromSquare size='0.75rem' className='mb-3'/>
+                </div>
             </div>
         </div>
     )
