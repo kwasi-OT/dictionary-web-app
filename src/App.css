@@ -108,12 +108,22 @@
   height: 4rem !important;
 }
 
+.formWrapper:focus {
+  outline: var(--purple) !important;
+}
+
 .formWrapper.dark {
   background-color: var(--dm-form-bg) !important;
 }
 
 .formInput {
   background-color: var(--off-white) !important;
+  outline: none !important;
+}
+
+input[type="text"]:focus-within {
+  outline: none !important;
+  border: none !important;
 }
 
 .formInput.dark {
@@ -125,10 +135,7 @@
   font-family: Inter !important;
   font-size: 1.25rem !important;
   font-weight: 700 !important;
-}
-
-.formInput.dark::placeholder {
-  color: var(--white) !important;
+  color: var(--grey) !important;
 }
 
 .title {
@@ -144,6 +151,25 @@
 .lexi {
   font-size: 1.5rem !important;
   color: var(--purple) !important;
+}
+
+.playButton {
+  width: 4.69rem !important;
+  height: 4.69rem !important;
+  border-radius: 50% !important;
+  background-color: #ebccff !important;
+}
+
+.playButton.dark {
+  background-color: var(--purple) !important;
+}
+
+.playButtonCenter {
+  color: var(--purple);
+}
+
+.playButtonCenter.dark {
+  color: #cc80ff;
 }
 
 .source {
@@ -191,6 +217,11 @@
 .bottomLink.dark {
   color: var(--white);
   text-decoration-color: var(--grey);
+}
+
+.line {
+  width: 90% !important;
+  padding-left: 0.5rem;
 }
 
 @media (min-width: 768px) {

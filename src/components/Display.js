@@ -14,8 +14,8 @@ const Display = () => {
                     <p className={`lexi ${darkTheme ? 'dark' : ''}`}>/'ki:bɔ:d/</p>
                 </div>
                 <div>
-                    <span className={`playButton ${darkTheme ? 'dark' : ''}`}>
-                        <MdPlayArrow className={`playButtonCenter ${darkTheme ? 'dark' : ''}`}/>
+                    <span className={`playButton d-flex mb-4 justify-content-center align-items-center ${darkTheme ? 'dark' : ''}`}>
+                        <MdPlayArrow size='2.5rem' className={`playButtonCenter ${darkTheme ? 'dark' : ''}`}/>
                     </span>
                 </div>
             </div>
@@ -23,8 +23,8 @@ const Display = () => {
                 <span>
                     <h4 className={`subTitle ${darkTheme ? 'dark' : ''}`}>noun</h4>
                 </span>
-                <span>
-                    <hr color='#fff' />
+                <span className='line'>
+                    <hr color='#757575'/>
                 </span>
             </div>
             <div>
@@ -39,8 +39,13 @@ const Display = () => {
                 <p className='source'>Synonyms</p>
                 <p className='syno'>electronic keyboard</p>
             </div>
-            <div>
-                <h4 className={`subTitle ${darkTheme ? 'dark' : ''}`}>verb</h4>
+            <div className='d-flex'>
+                <span>
+                    <h4 className={`subTitle ${darkTheme ? 'dark' : ''}`}>verb</h4>
+                </span>
+                <span className='line'>
+                    <hr color='#757575'/>
+                </span>
             </div>
             <div>
                 <div>
