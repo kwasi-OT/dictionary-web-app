@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { createContext, useContext } from 'react';
+import { createContext } from 'react';
 
 // declare the context provider
 export const GitHubContext = createContext();
@@ -11,7 +11,7 @@ const UserContext = ({children}) => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
-    // function to get api and data
+    // axios method to get api from .env variable
     const api = axios.create({
         baseURL:process.env.REACT_APP_VARIABLE_NAME
     });
@@ -21,8 +21,10 @@ const UserContext = ({children}) => {
             const response = await api.get(`/${searchTerm}`);
             const data = await response.data;
             console.log(data);
-        } catch (e) {
-
+            setLoading(false);
+            setWord(data);
+        } catch (error) {
+            setError(error);
         }
     }
     return (
