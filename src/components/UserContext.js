@@ -1,9 +1,10 @@
 import axios from 'axios';
-import React, { useState } from 'react';
-import { createContext } from 'react';
+import React from 'react';
+import { createContext, useState } from 'react';
+
 
 // declare the context provider
-export const GitHubContext = createContext();
+export const WordContext = createContext();
 // declare states
 const UserContext = ({children}) => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -12,25 +13,27 @@ const UserContext = ({children}) => {
     const [error, setError] = useState(null);
 
     // axios method to get api from .env variable
-    const api = axios.create({
-        baseURL:process.env.REACT_APP_VARIABLE_NAME
-    });
+    // const api = axios.create({
+    //     baseURL: process.env.REACT_APP_BASE_URL
+    // });
     const GetWord = async () => {
         try {
             setLoading(true);
-            const response = await api.get(`/${searchTerm}`);
+            const response = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${searchTerm}`);
             const data = await response.data;
             console.log(data);
             setLoading(false);
             setWord(data);
         } catch (error) {
             setError(error);
+        } finally {
+            setLoading(false);
         }
     }
     return (
-        <GitHubContext.Provider value={{searchTerm, loading, word, error, GetWord}} >
+        <WordContext.Provider value={{setSearchTerm, searchTerm, loading, word, error, GetWord}} >
             {children}
-        </GitHubContext.Provider>
+        </WordContext.Provider>
     )
 }
 

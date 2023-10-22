@@ -122,6 +122,10 @@
   outline: none !important;
 }
 
+input[type="text"] {
+  font-size: 1rem !important;
+}
+
 input[type="text"]:focus-within {
   outline: none !important;
   border: none !important;
@@ -270,5 +274,9 @@ input[type="text"]:focus-within {
 
   .listList {
     font-size: 1.125rem !important;
+  }
+
+  input[type="text"] {
+    font-size: 1.25rem !important;
   }
 }

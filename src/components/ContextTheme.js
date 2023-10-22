@@ -17,7 +17,5 @@ export const ContextTheme = ({children}) => {
         <ThemeContext.Provider value={{darkTheme, handleStateChange}}>
             {children}
         </ThemeContext.Provider>
-    )
+    );
 }
-
-export default ContextTheme;
