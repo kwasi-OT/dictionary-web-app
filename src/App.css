@@ -141,7 +141,7 @@ input[type="text"]:focus-within {
 
 .title {
   font-family: Inter !important;
-  font-size: 4rem !important;
+  font-size: 2rem !important;
   font-weight: 700;
 }
 
@@ -150,13 +150,13 @@ input[type="text"]:focus-within {
 }
 
 .lexi {
-  font-size: 1.5rem !important;
+  font-size: 1.125rem !important;
   color: var(--purple) !important;
 }
 
 .playButton {
-  width: 4.69rem !important;
-  height: 4.69rem !important;
+  width: 3rem !important;
+  height: 3rem !important;
   border-radius: 50% !important;
   background-color: #ebccff !important;
 }
@@ -179,14 +179,20 @@ input[type="text"]:focus-within {
   color: var(--grey) !important;
 }
 
+.meaning {
+  font-family: Inter !important;
+  font-size: 1rem !important;
+  color: var(--grey) !important;
+}
+
 .syno {
-  font-size: 1.25rem !important;
+  font-size: 1rem !important;
   font-weight: 700 !important;
   color: var(--purple);
 }
 
 .subTitle {
-  font-size: 1.5rem !important;
+  font-size: 1.125rem !important;
   font-weight: 700 !important;
   font-style: italic;
   color: #2d2d2d;
@@ -194,6 +200,10 @@ input[type="text"]:focus-within {
 
 .list.dark {
   color: var(--purple);
+}
+
+.listList {
+  font-size: 0.94rem !important;
 }
 
 .listList.dark {
@@ -235,5 +245,30 @@ input[type="text"]:focus-within {
   .navWrapper {
     width: 100% !important;
     height: fit-content !important;
+  }
+
+  .title {
+    font-size: 4rem !important;
+  }
+
+  .lexi {
+    font-size: 1.5rem !important;
+  }
+
+  .playButton {
+    width: 4.69rem !important;
+    height: 4.69rem !important;
+  }
+
+  .subTitle {
+    font-size: 1.5rem !important;
+  }
+
+  .syno {
+    font-size: 1.25rem !important;
+  }
+
+  .listList {
+    font-size: 1.125rem !important;
   }
 }

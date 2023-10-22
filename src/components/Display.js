@@ -28,7 +28,7 @@ const Display = () => {
                 </span>
             </div>
             <div>
-                <p className='source'>Meaning</p>
+                <p className='meaning'>Meaning</p>
                 <ul className={`list ${darkTheme ? 'dark' : ''}`}>
                     <li><span className={`listList ${darkTheme ? 'dark' : ''}`}>(etc.) A set of keys used to operate a typewriter, computer etc.</span></li>
                     <li><span className={`listList ${darkTheme ? 'dark' : ''}`}>A component of many instruments including the piano, organ, and harpsichord consisting of usually black and white keys that cause different tones to be produced when struck.</span></li>
@@ -36,7 +36,7 @@ const Display = () => {
                 </ul>
             </div>
             <div className={`d-flex gap-4 align-items-center`}>
-                <p className='source'>Synonyms</p>
+                <p className='meaning'>Synonyms</p>
                 <p className='syno'>electronic keyboard</p>
             </div>
             <div className='d-flex'>
@@ -49,7 +49,7 @@ const Display = () => {
             </div>
             <div>
                 <div>
-                    <p className='source'>Meaning</p>
+                    <p className='meaning'>Meaning</p>
                 </div>
                 <div>
                     <ul className={`list ${darkTheme ? 'dark' : ''}`}>
@@ -59,7 +59,7 @@ const Display = () => {
                 </div>
             </div>
             <hr color='#757575'/>
-            <div className={`d-flex gap-4 align-items-center ${darkTheme ? 'dark' : ''}`}>
+            <div className={`d-flex flex-wrap gap-2 align-items-center ${darkTheme ? 'dark' : ''}`}>
                 <p className='source'>Source</p>
                 <div className={`bottomLink d-flex gap-2 align-items-center ${darkTheme ? 'dark' : ''}`}>
                     <p>https://en.wiktionary.org/wiki/keyboard</p>
