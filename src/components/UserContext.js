@@ -26,9 +26,9 @@ const UserContext = ({children}) => {
         }
     }
     return (
-        <div>
-        
-        </div>
+        <GitHubContext.Provider value={{searchTerm, loading, word, error, GetWord}} >
+            {children}
+        </GitHubContext.Provider>
     )
 }
 
