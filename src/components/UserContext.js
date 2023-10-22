@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { createContext, useContext } from 'react';
 
-const UserContext = () => {
+
+export const GitHubContext = createContext();
+const UserContext = ({children}) => {
+    const [searchTerm, setSearchTerm] = useState('');
+    const [word, setWord] = useState(null);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
+    
     return (
         <div>
         
@@ -8,4 +16,4 @@ const UserContext = () => {
     )
 }
 
-export default UserContext
+export default UserContext;
