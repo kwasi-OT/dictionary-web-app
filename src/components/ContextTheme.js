@@ -4,7 +4,7 @@ import {createContext, useState} from 'react';
 // define context provider
 export const ThemeContext = createContext()
 
-const ContextTheme = ({children}) => {
+export const ContextTheme = ({ children }) => {
     // set state with darkTheme being false
     const[darkTheme, setDarkTheme] = useState(false);
 
@@ -19,5 +19,3 @@ const ContextTheme = ({children}) => {
         </ThemeContext.Provider>
     );
 }
-
-export default ContextTheme;

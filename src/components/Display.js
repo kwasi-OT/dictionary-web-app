@@ -1,14 +1,22 @@
 import React, { useContext } from 'react';
-import {MdPlayArrow} from 'react-icons/md'
+import { MdPlayArrow } from 'react-icons/md'
 import { ThemeContext } from './ContextTheme';
-import {FaArrowUpRightFromSquare} from 'react-icons/fa6'
-// import { WordContext } from './UserContext';
+import { FaArrowUpRightFromSquare } from 'react-icons/fa6'
+import { WordContext } from './SearchContext';
 
 const Display = () => {
     const {darkTheme} = useContext(ThemeContext);
-   
+    const {loading, error, definition} = useContext(WordContext)
 
-    if(!word) {
+    if(loading) {
+        return(
+            <div>
+                <h3>Loading...</h3>
+            </div>
+        )
+    }
+
+    if(!definition) {
         return (
             <div>
                 {error && 
