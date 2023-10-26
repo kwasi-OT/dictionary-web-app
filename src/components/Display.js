@@ -2,11 +2,11 @@ import React, { useContext } from 'react';
 import {MdPlayArrow} from 'react-icons/md'
 import { ThemeContext } from './ContextTheme';
 import {FaArrowUpRightFromSquare} from 'react-icons/fa6'
-import { WordContext } from './UserContext';
+// import { WordContext } from './UserContext';
 
 const Display = () => {
     const {darkTheme} = useContext(ThemeContext);
-    const {error, word} = useContext(WordContext);
+   
 
     if(!word) {
         return (

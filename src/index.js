@@ -4,17 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {ContextTheme} from './components/ContextTheme';
-import { WordContext } from './components/UserContext';
+import { ContextTheme } from './components/ContextTheme';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ContextTheme>
-      <WordContext>
-        <App />
-      </WordContext>
-    </ContextTheme>
+    <ContextTheme.Consumer>
+      <App />
+    </ContextTheme.Consumer>
   </React.StrictMode>
 );
 
