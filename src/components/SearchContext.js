@@ -19,9 +19,9 @@ export const SearchContext = ({ children }) => {
             const response = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${searchTerm}`);
             const data = await response.data
 
-            console.log('data', data);
-            console.log('word', data[0].word);
-            console.log('meanings', data[0].meanings)
+            console.log('data: ', data);
+            console.log('word: ', data[0].word);
+            console.log('meanings: ', data[0].meanings[0].definitions);
 
             setWord(data[0].word);
             setDefinition(data[0].meanings);
@@ -30,16 +30,6 @@ export const SearchContext = ({ children }) => {
             setAudio(data[0].phonetics);
             setSourceUrl(data[0].sourceUrls);
 
-            if (Array.isArray(data) && data.length > 0) {
-                // Assuming the first definition is the primary one
-                const primaryDefinition = data[0].meanings[0].definitions[0].definition;
-                setDefinition(primaryDefinition);
-                console.log(primaryDefinition);
-                setError(null);
-            } else {
-                // setDefinition(null);
-                setError('No definition found for the word: ' + searchTerm);
-            }
         
         } catch (error) {
             console.error('Error fetching data:', error);
