@@ -59,7 +59,7 @@ const Display = () => {
                     <ul className={`list ${darkTheme ? 'dark' : ''}`}>
                         
                         {definition.map((meaning) => { 
-                            return <li className={`listList ${darkTheme ? 'dark' : ''}`} key={uuidv4()}>{meaning.definition}</li>
+                            return <li key={uuidv4()}><span className={`listList ${darkTheme ? 'dark' : ''}`}>{meaning.definition}</span></li>
                         })}
                     </ul>
                 </div>
