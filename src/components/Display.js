@@ -6,7 +6,7 @@ import { WordContext } from './SearchContext';
 
 const Display = () => {
     const {darkTheme} = useContext(ThemeContext);
-    const {loading, error, word, phonetic} = useContext(WordContext)
+    const {loading, error, word, phonetic, sourceUrl} = useContext(WordContext)
 
     if(loading) {
         return(
@@ -88,7 +88,7 @@ const Display = () => {
                 <div className={`d-flex flex-wrap gap-2 align-items-center ${darkTheme ? 'dark' : ''}`}>
                     <p className='source'>Source</p>
                     <div className={`bottomLink d-flex gap-2 align-items-center ${darkTheme ? 'dark' : ''}`}>
-                        <p>https://en.wiktionary.org/wiki/keyboard</p>
+                        <p>{sourceUrl}</p>
                         <FaArrowUpRightFromSquare size='0.75rem' className='mb-3'/>
                     </div>
                 </div>
