@@ -5,6 +5,7 @@ import axios  from 'axios';
 export const WordContext = createContext();
 export const SearchContext = ({ children }) => {
     const [word, setWord] = useState('');
+    const [phonetic, setPhonetic] = useState('');
     const [searchTerm, setSearchTerm] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -15,22 +16,26 @@ export const SearchContext = ({ children }) => {
         try {
             const response = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${searchTerm}`);
             const data = await response.data
-            console.log(data);
 
-            // setWord(data);
-            setDefinition(data)
+            console.log('data', data);
+            console.log('word', data[0].word);
+            console.log('meanings', data[0].meanings)
+
+            setWord(data[0].word);
+            setDefinition(data[0].meanings);
             setError(null);
+            setPhonetic(data[0].phonetic);
 
-            // if (Array.isArray(data) && data.length > 0) {
-            //     // Assuming the first definition is the primary one
-            //     // const primaryDefinition = data[0].meanings[0].definitions[0].definition;
-            //     // setDefinition(primaryDefinition);
-            //     setWord(data);
-            //     setError(null);
-            // } else {
-            //     // setDefinition(null);
-            //     setError('No definition found for the word: ' + searchTerm);
-            // }
+            if (Array.isArray(data) && data.length > 0) {
+                // Assuming the first definition is the primary one
+                const primaryDefinition = data[0].meanings[0].definitions[0].definition;
+                setDefinition(primaryDefinition);
+                console.log(primaryDefinition);
+                setError(null);
+            } else {
+                // setDefinition(null);
+                setError('No definition found for the word: ' + searchTerm);
+            }
         
         } catch (error) {
             console.error('Error fetching data:', error);
@@ -43,7 +48,7 @@ export const SearchContext = ({ children }) => {
         }
     }
     return (
-        <WordContext.Provider value={{searchTerm, setSearchTerm, loading, error, GetWord, word, definition}}>
+        <WordContext.Provider value={{searchTerm, phonetic, setSearchTerm, loading, error, GetWord, definition, word}}>
             {children}
         </WordContext.Provider>
     )
