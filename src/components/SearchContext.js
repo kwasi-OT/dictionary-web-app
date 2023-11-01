@@ -8,7 +8,7 @@ export const SearchContext = ({ children }) => {
     const [searchTerm, setSearchTerm] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
-    // const [definition, setDefinition] = useState(null);
+    const [definition, setDefinition] = useState('');
 
     const GetWord = async () => {
         setLoading(true);
@@ -17,7 +17,8 @@ export const SearchContext = ({ children }) => {
             const data = await response.data
             console.log(data);
 
-            setWord(data);
+            // setWord(data);
+            setDefinition(data)
             setError(null);
 
             // if (Array.isArray(data) && data.length > 0) {
@@ -34,6 +35,7 @@ export const SearchContext = ({ children }) => {
         } catch (error) {
             console.error('Error fetching data:', error);
             setWord(null);
+            setDefinition(null)
             setError('An error occurred while fetching data.');
 
         } finally {
@@ -41,7 +43,7 @@ export const SearchContext = ({ children }) => {
         }
     }
     return (
-        <WordContext.Provider value={{searchTerm, setSearchTerm, loading, error, GetWord, word, setWord}}>
+        <WordContext.Provider value={{searchTerm, setSearchTerm, loading, error, GetWord, word, definition}}>
             {children}
         </WordContext.Provider>
     )

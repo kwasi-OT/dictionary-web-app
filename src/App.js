@@ -6,6 +6,7 @@ import Navigation from './components/Navigation';
 import SearchForm from './components/SearchForm';
 import { ThemeContext } from './components/ContextTheme';
 import { SearchContext } from './components/SearchContext';
+// import { WordContext } from './components/SearchContext';
 
 
 function App() {

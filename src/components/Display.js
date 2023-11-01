@@ -6,7 +6,7 @@ import { WordContext } from './SearchContext';
 
 const Display = () => {
     const {darkTheme} = useContext(ThemeContext);
-    const {loading, error, word} = useContext(WordContext)
+    const {loading, error, definition} = useContext(WordContext)
 
     if(loading) {
         return(
@@ -16,11 +16,11 @@ const Display = () => {
         )
     }
 
-    if(!word) {
+    if(!definition) {
         return (
-            <div className='d-flex flex-column justify-content-center, align-items-center'>
+            <div>
                 {error && 
-                <div>
+                <div className={`${darkTheme ? 'dark' : ''} errorMessage d-flex flex-column justify-content-center align-items-center`}>
                     <div className='imoji'>😕</div>
                     <div><h2>No Definitions Found</h2></div>
                     <div>
@@ -36,7 +36,7 @@ const Display = () => {
             <div>
                 <div className={`d-flex justify-content-between align-items-center`}>
                     <div>
-                        <h1 className={`title ${darkTheme ? 'dark' : ''}`}>{word.data}</h1>
+                        <h1 className={`title ${darkTheme ? 'dark' : ''}`}>{definition.word}</h1>
                         <p className={`lexi ${darkTheme ? 'dark' : ''}`}>/'ki:bɔ:d/</p>
                     </div>
                     <div>

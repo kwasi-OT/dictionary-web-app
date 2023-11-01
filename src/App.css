@@ -239,6 +239,10 @@ input[type="text"]:focus-within {
   padding-left: 0.5rem;
 }
 
+.errorMessage.dark {
+  color: var(--white);
+}
+
 @media (min-width: 768px) {
   .appWrapper {
     width: 50%;
