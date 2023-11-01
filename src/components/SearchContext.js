@@ -33,7 +33,7 @@ export const SearchContext = ({ children }) => {
             setPhonetic(data[0].phonetic);
             setAudio(data[0].phonetics);
             setSourceUrl(data[0].sourceUrls);
-            setSynonyms(data[0].meanings[0].synonyms);
+            setSynonyms(data[0].meanings[0].synonyms.synonym);
             setExample(data[1].meanings[0].definitions[0].example);
 
         

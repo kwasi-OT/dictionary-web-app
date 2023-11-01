@@ -7,7 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 const Display = () => {
     const {darkTheme} = useContext(ThemeContext);
-    const {loading, error, word, phonetic, sourceUrl, nounDefinition, verbDefinition, example} = useContext(WordContext)
+    const {loading, error, word, phonetic, sourceUrl, nounDefinition, verbDefinition, example, synonyms} = useContext(WordContext)
 
     if(loading) {
         return(
@@ -64,7 +64,9 @@ const Display = () => {
                 </div>
                 <div className={`d-flex gap-4 align-items-center`}>
                     <p className='meaning'>Synonyms</p>
-                    <p className='syno'>electronic keyboard</p>
+                    <p className='syno'>
+                        {synonyms? {synonyms} : 'No synonyms available'}
+                    </p>
                 </div>
                 <div className='d-flex'>
                     <span>
