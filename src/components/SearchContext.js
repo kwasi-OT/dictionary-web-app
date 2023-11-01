@@ -14,6 +14,7 @@ export const SearchContext = ({ children }) => {
     const [audio, setAudio] = useState(null);
     const [sourceUrl, setSourceUrl] = useState(null);
     const [example, setExample] = useState('');
+    const [synonyms, setSynonyms] = useState('');
 
     const GetWord = async () => {
         setLoading(true);
@@ -32,6 +33,7 @@ export const SearchContext = ({ children }) => {
             setPhonetic(data[0].phonetic);
             setAudio(data[0].phonetics);
             setSourceUrl(data[0].sourceUrls);
+            setSynonyms(data[0].meanings[0].synonyms);
             setExample(data[1].meanings[0].definitions[0].example);
 
         
@@ -46,7 +48,7 @@ export const SearchContext = ({ children }) => {
         }
     }
     return (
-        <WordContext.Provider value={{example, audio, sourceUrl, searchTerm, phonetic, setSearchTerm, loading, error, GetWord, nounDefinition, verbDefinition, word}}>
+        <WordContext.Provider value={{synonyms, example, audio, sourceUrl, searchTerm, phonetic, setSearchTerm, loading, error, GetWord, nounDefinition, verbDefinition, word}}>
             {children}
         </WordContext.Provider>
     )
