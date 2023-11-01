@@ -17,20 +17,23 @@ export const SearchContext = ({ children }) => {
             const data = await response.data
             console.log(data);
 
-            if (Array.isArray(data) && data.length > 0) {
-                // Assuming the first definition is the primary one
-                // const primaryDefinition = data[0].meanings[0].definitions[0].definition;
-                // setDefinition(primaryDefinition);
-                setWord(data);
-                setError(null);
-            } else {
-                // setDefinition(null);
-                setError('No definition found for the word: ' + searchTerm);
-            }
+            setWord(data);
+            setError(null);
+
+            // if (Array.isArray(data) && data.length > 0) {
+            //     // Assuming the first definition is the primary one
+            //     // const primaryDefinition = data[0].meanings[0].definitions[0].definition;
+            //     // setDefinition(primaryDefinition);
+            //     setWord(data);
+            //     setError(null);
+            // } else {
+            //     // setDefinition(null);
+            //     setError('No definition found for the word: ' + searchTerm);
+            // }
         
         } catch (error) {
             console.error('Error fetching data:', error);
-            // setDefinition(null);
+            setWord(null);
             setError('An error occurred while fetching data.');
 
         } finally {
