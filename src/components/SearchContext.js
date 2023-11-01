@@ -24,7 +24,7 @@ export const SearchContext = ({ children }) => {
             console.log('meanings: ', data[0].meanings[0].definitions);
 
             setWord(data[0].word);
-            setDefinition(data[0].meanings);
+            setDefinition(data[0].meanings[0].definitions);
             setError(null);
             setPhonetic(data[0].phonetic);
             setAudio(data[0].phonetics);

@@ -59,11 +59,8 @@ const Display = () => {
                     <ul className={`list ${darkTheme ? 'dark' : ''}`}>
                         
                         {definition.map((meaning) => { 
-                            return <li key={uuidv4()}>{meaning.definitions.definition}</li>
+                            return <li className={`listList ${darkTheme ? 'dark' : ''}`} key={uuidv4()}>{meaning.definition}</li>
                         })}
-                        {/* <li><span className={`listList ${darkTheme ? 'dark' : ''}`}>(etc.) A set of keys used to operate a typewriter, computer etc.</span></li>
-                        <li><span className={`listList ${darkTheme ? 'dark' : ''}`}>A component of many instruments including the piano, organ, and harpsichord consisting of usually black and white keys that cause different tones to be produced when struck.</span></li>
-                        <li><span className={`listList ${darkTheme ? 'dark' : ''}`}>A device with keys of a musical keyboard, used to control electronic sound-producing devices which may be built into or separate from the keyboard device.</span></li> */}
                     </ul>
                 </div>
                 <div className={`d-flex gap-4 align-items-center`}>
