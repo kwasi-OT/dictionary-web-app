@@ -7,7 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 const Display = () => {
     const {darkTheme} = useContext(ThemeContext);
-    const {loading, error, word, phonetic, sourceUrl, nounDefinition, verbDefinition} = useContext(WordContext)
+    const {loading, error, word, phonetic, sourceUrl, nounDefinition, verbDefinition, example} = useContext(WordContext)
 
     if(loading) {
         return(
@@ -84,7 +84,7 @@ const Display = () => {
                                 return <li key={uuidv4()}><span className={`listList ${darkTheme ? 'dark' : ''}`}>{meaning.definition}</span></li>
                             })}
                         </ul>
-                        <p className={`verbKeyboarding ${darkTheme ? 'dark' : ''}`}>“Keyboarding is the part of this job I hate the most.”</p>
+                        <p className={`verbKeyboarding ${darkTheme ? 'dark' : ''}`}>“{example}”</p>
                     </div>
                 </div>
                 <hr color='#757575'/>
