@@ -17,7 +17,7 @@ const Display = () => {
         )
     }
 
-    if(!word) {
+    if(!{word}) {
         return (
             <div>
                 {error && 
@@ -56,11 +56,13 @@ const Display = () => {
                 </div>
                 <div>
                     <p className='meaning'>Meaning</p>
-                    <ul className={`list ${darkTheme ? 'dark' : ''}`}>
-                        {nounDefinition.map((meaning) => { 
-                            return <li key={uuidv4()}><span className={`listList ${darkTheme ? 'dark' : ''}`}>{meaning.definition}</span></li>
-                        })}
-                    </ul>
+                    {nounDefinition?
+                        <ul className={`list ${darkTheme ? 'dark' : ''}`}>
+                            {nounDefinition.map((meaning) => { 
+                                return <li key={uuidv4()}><span className={`listList ${darkTheme ? 'dark' : ''}`}>{meaning.definition}</span></li>
+                            })} 
+                        </ul> : 'Sorry, we found no definition for noun.'
+                    }
                 </div>
                 <div className={`d-flex gap-4 align-items-center`}>
                     <p className='meaning'>Synonyms</p>
@@ -81,11 +83,13 @@ const Display = () => {
                         <p className='meaning'>Meaning</p>
                     </div>
                     <div>
-                        <ul className={`list ${darkTheme ? 'dark' : ''}`}>
-                            {verbDefinition.map((meaning) => { 
-                                return <li key={uuidv4()}><span className={`listList ${darkTheme ? 'dark' : ''}`}>{meaning.definition}</span></li>
-                            })}
-                        </ul>
+                        {verbDefinition?
+                            <ul className={`list ${darkTheme ? 'dark' : ''}`}>
+                                {verbDefinition.map((meaning) => { 
+                                    return <li key={uuidv4()}><span className={`listList ${darkTheme ? 'dark' : ''}`}>{meaning.definition}</span></li>
+                                })}
+                            </ul> : 'Sorry, we found no definition for verb.'
+                        }
                         <p className={`verbKeyboarding ${darkTheme ? 'dark' : ''}`}>“{example}”</p>
                     </div>
                 </div>
