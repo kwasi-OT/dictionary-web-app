@@ -7,7 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 const Display = () => {
     const {darkTheme} = useContext(ThemeContext);
-    const {loading, error, word, phonetic, sourceUrl, definition} = useContext(WordContext)
+    const {loading, error, word, phonetic, sourceUrl, nounDefinition, verbDefinition} = useContext(WordContext)
 
     if(loading) {
         return(
@@ -57,8 +57,7 @@ const Display = () => {
                 <div>
                     <p className='meaning'>Meaning</p>
                     <ul className={`list ${darkTheme ? 'dark' : ''}`}>
-                        
-                        {definition.map((meaning) => { 
+                        {nounDefinition.map((meaning) => { 
                             return <li key={uuidv4()}><span className={`listList ${darkTheme ? 'dark' : ''}`}>{meaning.definition}</span></li>
                         })}
                     </ul>
@@ -81,7 +80,9 @@ const Display = () => {
                     </div>
                     <div>
                         <ul className={`list ${darkTheme ? 'dark' : ''}`}>
-                            <li><span className={`listList ${darkTheme ? 'dark' : ''}`}>To type on a computer keyboard.</span></li>
+                            {verbDefinition.map((meaning) => { 
+                                return <li key={uuidv4()}><span className={`listList ${darkTheme ? 'dark' : ''}`}>{meaning.definition}</span></li>
+                            })}
                         </ul>
                         <p className={`verbKeyboarding ${darkTheme ? 'dark' : ''}`}>“Keyboarding is the part of this job I hate the most.”</p>
                     </div>

@@ -9,7 +9,8 @@ export const SearchContext = ({ children }) => {
     const [searchTerm, setSearchTerm] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
-    const [definition, setDefinition] = useState('');
+    const [nounDefinition, setNounDefinition] = useState('');
+    const [verbDefinition, setVerbDefinition] = useState('');
     const [audio, setAudio] = useState(null);
     const [sourceUrl, setSourceUrl] = useState(null);
 
@@ -24,7 +25,8 @@ export const SearchContext = ({ children }) => {
             console.log('meanings: ', data[0].meanings[0].definitions);
 
             setWord(data[0].word);
-            setDefinition(data[0].meanings[0].definitions);
+            setNounDefinition(data[0].meanings[0].definitions);
+            setVerbDefinition(data[0].meanings[1].definitions);
             setError(null);
             setPhonetic(data[0].phonetic);
             setAudio(data[0].phonetics);
@@ -34,7 +36,7 @@ export const SearchContext = ({ children }) => {
         } catch (error) {
             console.error('Error fetching data:', error);
             setWord(null);
-            setDefinition(null)
+            setNounDefinition(null)
             setError('An error occurred while fetching data.');
 
         } finally {
@@ -42,7 +44,7 @@ export const SearchContext = ({ children }) => {
         }
     }
     return (
-        <WordContext.Provider value={{audio, sourceUrl, searchTerm, phonetic, setSearchTerm, loading, error, GetWord, definition, word}}>
+        <WordContext.Provider value={{audio, sourceUrl, searchTerm, phonetic, setSearchTerm, loading, error, GetWord, nounDefinition, verbDefinition, word}}>
             {children}
         </WordContext.Provider>
     )
