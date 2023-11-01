@@ -8,7 +8,7 @@ export const SearchContext = ({ children }) => {
     const [searchTerm, setSearchTerm] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
-    const [definition, setDefinition] = useState(null);
+    // const [definition, setDefinition] = useState(null);
 
     const GetWord = async () => {
         setLoading(true);
@@ -19,17 +19,18 @@ export const SearchContext = ({ children }) => {
 
             if (Array.isArray(data) && data.length > 0) {
                 // Assuming the first definition is the primary one
-                const primaryDefinition = data[0].meanings[0].definitions[0].definition;
-                setDefinition(primaryDefinition);
+                // const primaryDefinition = data[0].meanings[0].definitions[0].definition;
+                // setDefinition(primaryDefinition);
+                setWord(data);
                 setError(null);
             } else {
-                setDefinition(null);
+                // setDefinition(null);
                 setError('No definition found for the word: ' + searchTerm);
             }
         
         } catch (error) {
             console.error('Error fetching data:', error);
-            setDefinition(null);
+            // setDefinition(null);
             setError('An error occurred while fetching data.');
 
         } finally {
@@ -37,7 +38,7 @@ export const SearchContext = ({ children }) => {
         }
     }
     return (
-        <WordContext.Provider value={{searchTerm, setSearchTerm, definition, loading, error, GetWord, word, setWord}}>
+        <WordContext.Provider value={{searchTerm, setSearchTerm, loading, error, GetWord, word, setWord}}>
             {children}
         </WordContext.Provider>
     )
