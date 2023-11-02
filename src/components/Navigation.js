@@ -25,7 +25,7 @@ const Navigation = () => {
                     <select className={`select border-0 ${darkTheme ? 'dark' : ''}`}>
                         <option>Sans Serif</option>
                         <option>Serif</option>
-                        <option>Mono</option>
+                        <option>Space Mono</option>
                     </select>
                 </div>
                 <span className={`vLine vr ${darkTheme ? 'dark' : ''}`}></span>
