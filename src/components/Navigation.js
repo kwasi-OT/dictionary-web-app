@@ -8,6 +8,13 @@ import { ThemeContext } from './ContextTheme';
 const Navigation = () => {
     const {darkTheme, handleStateChange} = useContext(ThemeContext);
 
+    const select = document.querySelector('select');
+    if(select) {
+        select.addEventListener('change', (event) => {
+            document.body.style.fontFamily = event.target.value;
+        });
+    }
+
     return (
         <div className='navWrapper d-flex justify-content-between align-items-center'>
             <div className='iconContainer'>
