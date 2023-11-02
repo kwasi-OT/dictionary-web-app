@@ -90,7 +90,11 @@ const Display = () => {
                                 })}
                             </ul> : 'Sorry, we found no definition for verb.'
                         }
-                        <p className={`verbKeyboarding ${darkTheme ? 'dark' : ''}`}>“{example}”</p>
+                        <div>
+                            {example?
+                                <p className={`verbKeyboarding ${darkTheme ? 'dark' : ''}`}>“{example}”</p> : null
+                            }
+                        </div>
                     </div>
                 </div>
                 <hr color='#757575'/>

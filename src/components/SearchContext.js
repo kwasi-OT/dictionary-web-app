@@ -39,14 +39,14 @@ export const SearchContext = ({ children }) => {
         
         } catch (error) {
             // console.error('Error fetching data:', error);
-            setWord(null);
-            setNounDefinition(null)
-            setVerbDefinition(null);
-            setPhonetic(null);
-            setAudio(null);
-            setSourceUrl(null);
-            setSynonyms(null);
-            setExample(null);
+            // setWord(null);
+            // setNounDefinition(null)
+            // setVerbDefinition(null);
+            // setPhonetic(null);
+            // setAudio(null);
+            // setSourceUrl(null);
+            // setSynonyms(null);
+            // setExample(null);
             setError('An error occurred while fetching data.');
 
         } finally {
