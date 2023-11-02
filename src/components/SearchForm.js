@@ -21,7 +21,7 @@ const SearchForm = () => {
         <div id='formWrapper' className={`d-flex flex-column px-3 py-2 formWrapper ${darkTheme ? 'dark' : ''}`}>
             <div className='d-flex justify-content-between align-items-center mb-4  w-100'>
                 <input type='text' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} placeholder='Search for any word…' className={`formInput form-control border border-0 ${darkTheme ? 'dark' : ''}`}/>
-                <CiSearch color='#A445ED' size='0.97rem' onClick={HandleSubmit}/>
+                <CiSearch className='searchIcon' color='#A445ED' size='1.2rem' onClick={HandleSubmit}/>
             </div>
             <div id='emptyError' className='text-danger'></div>
         </div>

@@ -58,6 +58,10 @@ body {
   height: fit-content !important;
 }
 
+.searchIcon {
+  cursor: pointer;
+}
+
 .fontSelect {
   width: 56% !important;
   height: fit-content !important;
