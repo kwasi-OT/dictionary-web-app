@@ -245,6 +245,10 @@ input[type="text"]:focus-within {
   text-decoration-color: var(--grey);
 }
 
+.loading.dark {
+  color: var(--white);
+}
+
 .line {
   width: 90% !important;
   padding-left: 0.5rem;

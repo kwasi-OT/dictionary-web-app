@@ -6,12 +6,12 @@ import Navigation from './components/Navigation';
 import SearchForm from './components/SearchForm';
 import { ThemeContext } from './components/ContextTheme';
 import { SearchContext } from './components/SearchContext';
-// import { WordContext } from './components/SearchContext';
 
 
 function App() {
   const {darkTheme} = useContext(ThemeContext);
- 
+  
+
   return (
     <SearchContext>
       <div className={`appContainer ${darkTheme ? 'dark' : ''} d-flex flex-column justify-content-center align-items-center`}>

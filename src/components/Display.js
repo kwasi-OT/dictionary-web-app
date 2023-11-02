@@ -11,8 +11,8 @@ const Display = () => {
 
     if(loading) {
         return(
-            <div>
-                <h3>Loading...</h3>
+            <div className='d-flex flex-column justify-content-center align-items-center'>
+                <h3 className={`loading ${darkTheme ? 'dark' : ''}`}>Loading...</h3>
             </div>
         )
     }
