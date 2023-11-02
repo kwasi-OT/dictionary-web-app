@@ -9,14 +9,24 @@ const Display = () => {
     const {darkTheme} = useContext(ThemeContext);
     const {loading, error, word, phonetic, sourceUrl, nounDefinition, verbDefinition, example, synonyms} = useContext(WordContext)
 
-    if(loading) {
+
+    if(word.length === 0) {
         return(
             <div className='d-flex flex-column justify-content-center align-items-center'>
-                <h3 className={`loading ${darkTheme ? 'dark' : ''}`}>Loading...</h3>
+                <h3 className={`loading ${darkTheme ? 'dark' : ''}`}>Please enter a word to begin search!</h3>
             </div>
         )
     }
 
+    if(loading) {
+        return(
+            <div className='d-flex flex-column justify-content-center align-items-center mt-10'>
+                <h1 className={`loading ${darkTheme ? 'dark' : ''}`}>Loading...</h1>
+            </div>
+        )
+    }
+
+    
     if(!{word}) {
         return (
             <div>
