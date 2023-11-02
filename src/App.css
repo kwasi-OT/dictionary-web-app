@@ -66,11 +66,19 @@ body {
   color: #2d2d2d !important;
   line-height: 1.5rem !important;
   font-weight: 700 !important;
+  /* border-radius: 1rem !important; */
+  border: none !important;
+  /* border-radius: 1rem !important; */
 }
+
+/* .fontSelect.dark {
+  box-shadow: 0px 5px 30px 0px #A445ED;
+} */
 
 .select.dark {
   background-color: var(--dm-body-bg) !important;
   color: var(--white) !important;
+  border: none !important;
 }
 
 .vLine {

@@ -22,7 +22,7 @@ const Navigation = () => {
             </div>
             <div className='rightNav d-flex'>
                 <div className={`fontSelect ${darkTheme ? 'dark' : ''}`}>
-                    <select className={`select border-0 ${darkTheme ? 'dark' : ''}`}>
+                    <select className={`select border border-0 ${darkTheme ? 'dark' : ''}`}>
                         <option>Sans Serif</option>
                         <option>Serif</option>
                         <option>Space Mono</option>
