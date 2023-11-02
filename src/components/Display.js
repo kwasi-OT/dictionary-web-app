@@ -4,6 +4,7 @@ import { ThemeContext } from './ContextTheme';
 import { FaArrowUpRightFromSquare } from 'react-icons/fa6'
 import { WordContext } from './SearchContext';
 import { v4 as uuidv4 } from 'uuid';
+import { GiArchiveResearch } from 'react-icons/gi'
 
 const Display = () => {
     const {darkTheme} = useContext(ThemeContext);
@@ -13,7 +14,8 @@ const Display = () => {
     if(word.length === 0) {
         return(
             <div className='d-flex flex-column justify-content-center align-items-center'>
-                <h3 className={`loading ${darkTheme ? 'dark' : ''}`}>Please enter a word to begin search!</h3>
+                <GiArchiveResearch size='5rem' color='#A445ED' className='loading'/>
+                <h3 className={`loading ${darkTheme ? 'dark' : ''}`}>Please enter a word to begin the search!</h3>
             </div>
         )
     }

@@ -245,6 +245,11 @@ input[type="text"]:focus-within {
   text-decoration-color: var(--grey);
 }
 
+.loading {
+  text-align: center !important;
+  margin-top: 5rem !important;
+}
+
 .loading.dark {
   color: var(--white);
 }
