@@ -66,9 +66,11 @@ const Display = () => {
                 </div>
                 <div className={`d-flex gap-4 align-items-center`}>
                     <p className='meaning'>Synonyms</p>
-                    <p className='syno'>
-                        {synonyms? {synonyms} : 'No synonyms available'}
-                    </p>
+                    {synonyms?
+                        <div className='syno'>
+                            {synonyms.map((synonym) => synonym).join(', ')}
+                        </div> : <span className='syno'>No synonyms available</span>
+                    }
                 </div>
                 <div className='d-flex'>
                     <span>
